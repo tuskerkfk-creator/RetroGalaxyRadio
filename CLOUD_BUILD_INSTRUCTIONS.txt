@@ -1,0 +1,21 @@
+RETRO GALAXY RADIO - BUILD AN APK WITHOUT INSTALLING ANDROID STUDIO
+
+This ZIP contains Android source code, NOT an APK. The included GitHub Actions workflow builds an APK on GitHub's servers.
+
+1. On your computer, sign in to https://github.com (create a free account if needed).
+2. Click + > New repository. Call it RetroGalaxyRadio, choose Private or Public, and create the repository.
+3. Download and EXTRACT RetroGalaxyRadio_Cloud_Build.zip to your computer.
+4. On the empty GitHub repo page, select 'uploading an existing file' (or Add file > Upload files).
+5. Drag the CONTENTS of the extracted RetroGalaxyRadio folder into the upload page, including the .github folder. Do not drag just the zip file and do not add an extra nesting folder.
+   Important: Windows may hide directories starting with a dot. Verify the repo shows .github/workflows/build-apk.yml along with build.gradle and app/.
+6. Click 'Commit changes' and wait for the upload to finish.
+7. Click the Actions tab > Build Android 7 APK > Run workflow > Run workflow. (Pushing to main may start a build automatically.)
+8. Wait for the run to finish with a green checkmark. Open that run. Near the bottom, download 'RetroGalaxyRadio-Android7-APK' under Artifacts.
+9. Unzip the artifact. Inside will be 'app-debug.apk'. Transfer it to your Galaxy SC-05G (USB cable or any secure file transfer).
+10. On the Galaxy, open My Files > Downloads or folder where you saved app-debug.apk; tap it to install.
+11. If Android 7 blocks installation, open Settings > Lock screen and security > Unknown sources (or Settings > Security > Unknown sources), temporarily enable it, and confirm. Tap the APK again. Disable Unknown sources after installation.
+12. Connect Wi-Fi. Open Retro Galaxy Radio. Tap Play, tune by touching the dial, set volume with the slider, and set your weather city with SETTINGS.
+
+If the GitHub Actions build fails, open the failed step, copy the red error message and share it for troubleshooting. This APK is debug-signed for personal installation, not Play Store distribution.
+
+CAUTION: This source package has not yet been compiled or physically tested on your Samsung SC-05G. Streaming depends on station servers and internet connectivity.
